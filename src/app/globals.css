@@ -48,7 +48,7 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -2;
   opacity: 0.18;
   mix-blend-mode: multiply;
   background-image:
@@ -96,15 +96,11 @@ body::after {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
   background: radial-gradient(1200px circle at 50% 40%, transparent 55%, rgba(0,0,0,0.06) 100%);
 }
 
-/* keep the app above the wallpaper layers */
-body > * {
-  position: relative;
-  z-index: 1;
-}
+
 
 /* --- Painted UI utilities --- */
 
@@ -167,7 +163,22 @@ body > * {
   background-size: 280px 280px;
 }
 
-html,
-body {
+html {
+  height: 100%;
+  overflow-y: auto;   /* ✅ ONLY html scrolls (1 scrollbar) */
   overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  overflow: visible;  /* ✅ body does NOT become a scroller */
+}
+
+html, body {
+  height: 100%;
+  
+}
+
+body {
+  position: relative;
 }

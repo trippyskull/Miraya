@@ -104,7 +104,7 @@ export default function Home() {
 
   return (
     <LazyMotion features={domAnimation}>
-      <main className="min-h-screen bg-[#fbfbf4] text-black">
+      <main className="min-h-screen overflow-x-hidden bg-[#fbfbf4] text-black">
         {/* Sticky header */}
         <header className="sticky top-0 z-50 border-b border-black/10 bg-[#fbfbf4]/75 backdrop-blur">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">

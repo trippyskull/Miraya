@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SmoothScroll from "./components/SmoothScroll";
 import { Playfair_Display, Caveat } from "next/font/google";
-
-import "./globals.css";
 import { LoadingProvider } from "./components/LoadingProvider";
-
+import SmoothScroll from "./components/SmoothScroll";
 
 const display = Playfair_Display({
   subsets: ["latin"],
@@ -26,9 +23,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={`${display.variable} ${handwritten.variable}`}>
+      <body className="overflow-x-hidden">
+         <SmoothScroll>
         <LoadingProvider>{children}</LoadingProvider>
+        </SmoothScroll>
       </body>
     </html>
   );
