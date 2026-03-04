@@ -192,3 +192,15 @@ html, body {
     overflow-x: clip; /* best: prevents sideways scroll but keeps normal y scroll */
   }
 }
+
+/* ✅ iOS / touch devices: disable heavy fixed backgrounds that can break scrolling */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    background-attachment: scroll, scroll, scroll, scroll !important;
+  }
+
+  body::before,
+  body::after {
+    position: absolute !important; /* instead of fixed */
+  }
+}

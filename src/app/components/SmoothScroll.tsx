@@ -5,12 +5,13 @@ import Lenis from "lenis";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    // ✅ Disable Lenis on touch devices (phones/tablets) so scrolling never gets stuck
+    // ✅ If it's a touch device (phones/tablets), DO NOT use Lenis.
     const isTouch =
       typeof window !== "undefined" &&
-      (window.matchMedia("(pointer: coarse)").matches ||
-        "ontouchstart" in window ||
-        navigator.maxTouchPoints > 0);
+      ("ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        // @ts-ignore
+        navigator.msMaxTouchPoints > 0);
 
     if (isTouch) return;
 
