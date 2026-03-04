@@ -1,7 +1,7 @@
 export type Variant = {
   id: string;
-  name: string; // e.g. "50ml" / "Vanilla" / "Small"
-  price: number; // in INR
+  name: string;
+  price: number; // INR
   inStock?: boolean;
 };
 
@@ -10,124 +10,142 @@ export type Product = {
   title: string;
   subtitle: string;
   description: string;
-  images: string[]; // path in /public
+  images: string[]; // paths in /public
   variants: Variant[];
   tags: string[];
 };
 
 export const PRODUCTS: Product[] = [
   {
-    id: "p1",
-    title: "Hydra Cleanser",
-    subtitle: "Soft foam, zero tightness",
+    id: "corset-bag",
+    title: "Corset Bag",
+    subtitle: "She’s laced. She’s bold. She’s the moment.",
     description:
-      "A gentle daily cleanser that keeps skin balanced and calm—made for a clean, plush finish.",
+      `She’s laced. She’s bold. She’s the moment.
+Crafted in premium leather with delicate lace trim and bow lace-up detailing, this structured corset silhouette is pure statement energy. Feminine, fierce, and impossible to ignore. Spacious on the inside with a soft blush lining and secure zip pocket — because style should never compromise practicality.
+Lace it tight. Rule the night / Main Character? Obviously.
+
+Dimensions:
+• Height: 6.5 inches
+• Width: 8.5 inches
+• Depth: 3.5 inches
+• Handle Drop: 4.5 inches`,
     images: [
-  "/hero/prod1.png",
-  "/products/p1-2.svg",
-  "/products/p1-3.svg",
-  "/products/p1-4.svg",
-  "/products/p1-5.svg",
-],
-    tags: ["Daily", "Gentle", "Glow"],
-    variants: [
-      { id: "p1-50", name: "50ml", price: 299 },
-      { id: "p1-100", name: "100ml", price: 499 },
+      "/products/Corset Bag (front).png",
+      "/products/Corset Bag (side).png",
+      "/products/Corset Bag (inside).png",
+      "/products/Corset bag (bottom).png",
     ],
+    variants: [{ id: "corset-standard", name: "Standard", price: 6500 }],
+    tags: [],
   },
   {
-    id: "p2",
-    title: "Dew Serum",
-    subtitle: "Plump + brighten",
+    id: "croissant-bag",
+    title: "Croissant Bag",
+    subtitle: "Soft, warm, fresh-out-the-oven energy.",
     description:
-      "A lightweight serum for bounce and clarity. Layers under everything with a glassy glow.",
+      `The Miraya Croissant Bag is crafted from luxuriously smooth genuine leather that feels as soft as the first warm bite of a fresh croissant. The sculpted panels curve like delicate pastry layers — plush, rounded, and perfectly folded into a silhouette that looks almost too good to be real.
+
+This isn’t just a bag.
+It’s that soft, warm, fresh-out-the-oven energy.
+The kind that makes heads turn — and suddenly crave a croissant.
+
+Dimensions:
+• Length: 10 inches
+• Height: 5 inches
+• Width (Base Depth): 3 inches`,
     images: [
-  "/hero/prod2.png",
-  "/products/p2-2.svg",
-  "/products/p2-3.svg",
-  "/products/p2-4.svg",
-  "/products/p2-5.svg",
-],
-    tags: ["Brighten", "Plump", "Daily"],
-    variants: [
-      { id: "p2-15", name: "15ml", price: 449 },
-      { id: "p2-30", name: "30ml", price: 799 },
+      "/products/Croissant Bag (front).png",
+      "/products/Croissant Bag (side).png",
+      "/products/Croissant Bag (inside).png",
+      "/products/Croissant Bag (bottom).png",
     ],
+    variants: [{ id: "croissant-standard", name: "Standard", price: 4000 }],
+    tags: [],
   },
   {
-    id: "p3",
-    title: "Cloud Cream",
-    subtitle: "Barrier-first hydration",
+    id: "peony-bloom-bag",
+    title: "Peony Bloom bag",
+    subtitle: "Carry art. Not flowers.",
     description:
-      "A rich-but-breathable moisturizer that seals hydration and supports a calm skin barrier.",
+      `Designed to resemble a delicate bouquet of peonies, this statement piece blends playful charm with refined craftsmanship. The structured cone silhouette, polka-dot detailing, and soft satin bow create a dreamy aesthetic — while the secure top zip closure and spacious interior make it beautifully functional.
+Because why carry flowers, when you can carry art?
+
+Dimensions:
+• Height: 12–13 inches
+• Top Diameter: 9–10 inches
+• Base Width: 4–5 inches`,
     images: [
-  "/hero/prod3.png",
-  "/products/p3-2.svg",
-  "/products/p3-3.svg",
-  "/products/p3-4.svg",
-  "/products/p3-5.svg",
-],
-    tags: ["Barrier", "Moisture", "Soft"],
-    variants: [
-      { id: "p3-30", name: "30g", price: 499 },
-      { id: "p3-50", name: "50g", price: 749 },
+      "/products/Peony bloom bag (front).png",
+      "/products/Peony Bloom bag (side).png",
+      "/products/Peony bloom bag (inside).png",
+      "/products/Peony bloom bag (bottom).png",
     ],
+    variants: [{ id: "peony-standard", name: "Standard", price: 7500 }],
+    tags: [],
   },
   {
-    id: "p4",
-    title: "Moon Mist",
-    subtitle: "Instant refresh spray",
+    id: "pyramid-bag",
+    title: "Pyramid Bag",
+    subtitle: "Doesn’t follow trends. Creates them.",
     description:
-      "A fine face mist to reset your skin during the day—hydration without heaviness.",
+      `Inspired by architectural monuments and ancient pyramids, this structured black statement bag is crafted in rich textured vegan leather with gold-plated trims defining its geometric edges. The magnetic top closure ensures effortless access, while the thoughtfully designed interior offers ample space.
+A piece that doesn’t follow trends — it creates them.
+
+Dimensions:
+• Height: 7–8 inches
+• Base Width: 4–5 inches`,
     images: [
-  "/hero/prod4.png",
-  "/products/p4-2.svg",
-  "/products/p4-3.svg",
-  "/products/p4-4.svg",
-  "/products/p4-5.svg",
-],
-    tags: ["Mist", "Refresh", "Travel"],
-    variants: [
-      { id: "p4-50", name: "50ml", price: 349 },
-      { id: "p4-100", name: "100ml", price: 599 },
+      "/products/Pyramid bag (front).png",
+      "/products/Pyramid Bag (side).png",
+      "/products/Pyramid Bag (inside).png",
+      "/products/Pyramid Bag (bottom).png",
     ],
+    variants: [{ id: "pyramid-standard", name: "Standard", price: 4500 }],
+    tags: [],
   },
   {
-    id: "p5",
-    title: "Glow Balm",
-    subtitle: "Luxe overnight repair",
+    id: "seashell-clutch",
+    title: "Seashell clutch",
+    subtitle: "Coastal charm. Timeless elegance.",
     description:
-      "A buttery night balm that melts in and helps repair the look of dull, stressed skin.",
+      `Inspired by the gentle curves of a seashell, the Miraya Seashell Clutch is where coastal charm meets timeless elegance. Crafted in premium leather with a sculpted spiral design and a pearl-kiss clasp, it’s your perfect companion for beach soirées, sundowners, and destination weddings.
+Wear it as a sling with the gold chain strap or carry it as a statement clutch — either way, it whispers luxury.
+
+Dimensions:
+• Width: 7.5 inches
+• Height: 6.7 inches
+• Depth: 2.4 inches
+• Chain drop: 21.7 inches`,
     images: [
-  "/hero/prod5.png",
-  "/products/p5-2.svg",
-  "/products/p5-3.svg",
-  "/products/p5-4.svg",
-  "/products/p5-5.svg",
-],
-    tags: ["Night", "Repair", "Luxe"],
-    variants: [
-      { id: "p5-15", name: "15g", price: 399 },
-      { id: "p5-30", name: "30g", price: 699 },
+      "/products/seashell Clutch (Front).png",
+      "/products/seashell Clutch (side).png",
+      "/products/seashell Clutch (inside).png",
+      "/products/seashell Clutch (bottom).png",
     ],
+    variants: [{ id: "seashell-standard", name: "Standard", price: 4500 }],
+    tags: [],
   },
   {
-    id: "p6",
-    title: "SPF Veil",
-    subtitle: "Daily sun, no cast",
+    id: "teapot-bag",
+    title: "Teapot Bag",
+    subtitle: "This won’t make tea for you — but you’ll be the tea of the party.",
     description:
-      "A comfortable daily SPF that sits well under makeup and keeps skin looking fresh.",
+      `This will not make tea for you but you will be the tea of the party.
+
+Inspired by India’s timeless love for chai, crafted in structured premium vegan leather with refined embroidery and gold-tone hardware. The circular zip-around closure opens smoothly to reveal a spacious interior — and a circular mirror attached to the inside of the lid (because quick touch-ups between compliments are essential).
+
+Dimensions:
+• Height: 7 inches
+• Width (including spout): 10 inches
+• Depth: 5 inches`,
     images: [
-  "/hero/prod6.png",
-  "/products/p6-2.svg",
-  "/products/p6-3.svg",
-  "/products/p6-4.svg",
-  "/products/p6-5.svg",
-],
-    tags: ["SPF", "Daily", "No-cast"],
-    variants: [
-      { id: "p6-30", name: "30ml", price: 499 },
-      { id: "p6-50", name: "50ml", price: 749 },
+      "/products/Teapot Bag (front).png",
+      "/products/Teapot bag (side).png",
+      "/products/Teapot Bag (inside).png",
+      "/products/Teapot Bag (bottom).png",
     ],
+    variants: [{ id: "teapot-standard", name: "Standard", price: 5999 }],
+    tags: [],
   },
 ];

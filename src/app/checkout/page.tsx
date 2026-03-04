@@ -83,10 +83,13 @@ const [placing, setPlacing] = useState(false);
     payment: "COD",
     total,
     items: enriched.map((it) => ({
-      id: it.id,
-      variantId: it.variantId,
-      qty: it.qty,
-    })),
+  id: it.id,
+  title: it.product.title,
+  variantId: it.variantId,
+  variantName: it.variant.name,
+  qty: it.qty,
+  price: it.variant.price,
+})),
   };
 
   try {

@@ -104,9 +104,9 @@ export default function Home() {
 
   return (
     <LazyMotion features={domAnimation}>
-      <main className="min-h-screen overflow-x-hidden bg-[#fbfbf4] text-black">
+      <main className="min-h-screen bg-[#fbfbf4] text-black pt-[72px]">
         {/* Sticky header */}
-        <header className="sticky top-0 z-50 border-b border-black/10 bg-[#fbfbf4]/75 backdrop-blur">
+        <header className="fixed top-0 left-0 right-0 z-50 border-b border-black/10 bg-[#fbfbf4]/75 backdrop-blur">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
             <Link href="/" className="flex items-center gap-3">
               <Image
@@ -143,7 +143,7 @@ export default function Home() {
 
         {/* HERO: sticky slideshow */}
         <section className="relative">
-          <div className="sticky top-[64px] z-10 h-[72vh] overflow-hidden border-b border-black/10">
+          <div className="sticky top-[72px] z-10 h-[72vh] overflow-hidden border-b border-black/10">
             <PaperTexture />
 
             <div className="relative mx-auto h-full max-w-7xl px-6 py-8">
@@ -175,9 +175,7 @@ export default function Home() {
                 {/* Hero text overlay */}
                 <div className="absolute left-6 top-6 z-20 sm:left-10 sm:top-10">
                   <div className="max-w-md rounded-[26px] border border-black/10 bg-white/40 p-5 backdrop-blur-md shadow-[0_18px_70px_rgba(0,0,0,0.10)]">
-                    <div className="inline-flex items-center rounded-full border border-black/10 bg-white/55 px-4 py-2 text-[11px] tracking-[0.35em] text-black/60">
-                      HAND-PAINTED VIBE
-                    </div>
+                    
 
                     <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
                       Miraya
@@ -251,7 +249,7 @@ export default function Home() {
                         src={p.images[0]}
                         alt={p.title}
                         fill
-                        className="object-cover transition duration-500 group-hover:scale-[1.03] group-hover:brightness-[1.03] group-hover:contrast-[1.03]"
+                        className="object-contain p-6 transition duration-500 group-hover:scale-[1.02]"
                         sizes="(max-width: 1024px) 100vw, 33vw"
                       />
                       <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]" />

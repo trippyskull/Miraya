@@ -4,11 +4,14 @@ import { Playfair_Display, Caveat } from "next/font/google";
 import { LoadingProvider } from "./components/LoadingProvider";
 import SmoothScroll from "./components/SmoothScroll";
 
+
 const display = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-display",
 });
+
+
 
 const handwritten = Caveat({
   subsets: ["latin"],
