@@ -1,14 +1,18 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Lenis from "lenis";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
-  const lenisRef = useRef<Lenis | null>(null);
-
   useEffect(() => {
-    // ✅ Prevent double-init in React Strict Mode (dev)
-    if (lenisRef.current) return;
+    // ✅ Disable Lenis on touch devices (phones/tablets) so scrolling never gets stuck
+    const isTouch =
+      typeof window !== "undefined" &&
+      (window.matchMedia("(pointer: coarse)").matches ||
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0);
+
+    if (isTouch) return;
 
     const lenis = new Lenis({
       duration: 1.15,
@@ -16,19 +20,16 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       wheelMultiplier: 1.0,
     });
 
-    lenisRef.current = lenis;
-
-    let rafId = 0;
+    let raf = 0;
     const loop = (time: number) => {
       lenis.raf(time);
-      rafId = requestAnimationFrame(loop);
+      raf = requestAnimationFrame(loop);
     };
-    rafId = requestAnimationFrame(loop);
+    raf = requestAnimationFrame(loop);
 
     return () => {
-      cancelAnimationFrame(rafId);
+      cancelAnimationFrame(raf);
       lenis.destroy();
-      lenisRef.current = null;
     };
   }, []);
 
