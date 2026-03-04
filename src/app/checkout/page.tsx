@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { PRODUCTS } from "../lib/products";
 import { useLoading } from "../components/LoadingProvider";
+import Image from "next/image";
 
 type CartItem = { id: string; variantId: string; qty: number };
 
@@ -84,9 +85,6 @@ const [placing, setPlacing] = useState(false);
     total,
     items: enriched.map((it) => ({
   id: it.id,
-  title: it.product.title,
-  variantId: it.variantId,
-  variantName: it.variant.name,
   qty: it.qty,
   price: it.variant.price,
 })),
@@ -129,7 +127,15 @@ const [placing, setPlacing] = useState(false);
       <header className="sticky top-0 z-50 border-b border-black/10 bg-[#fbfbf4]/75 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href="/" className="text-sm font-semibold tracking-[0.22em]">
-            MIRAYA
+            <Image
+                src="/hero/logo.png"
+                alt="Miraya"
+                width={1800}
+                height={350}
+                priority
+                className="h-12 w-auto"
+                style={{ imageRendering: "auto" }}
+              />
           </Link>
           <Link
             href="/cart"

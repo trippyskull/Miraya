@@ -183,3 +183,12 @@ body {
   position: relative;
 }
 
+html, body {
+  overflow-x: hidden; /* fallback */
+}
+
+@supports (overflow: clip) {
+  html, body {
+    overflow-x: clip; /* best: prevents sideways scroll but keeps normal y scroll */
+  }
+}

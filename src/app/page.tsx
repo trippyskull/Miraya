@@ -110,7 +110,7 @@ export default function Home() {
           <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/hero/logof.png"
+                src="/hero/logo.png"
                 alt="Miraya"
                 width={2000}
                 height={400}
@@ -174,14 +174,13 @@ export default function Home() {
 
                 {/* Hero text overlay */}
                 <div className="absolute left-6 top-6 z-20 sm:left-10 sm:top-10">
-                  <div className="max-w-md rounded-[26px] border border-black/10 bg-white/40 p-5 backdrop-blur-md shadow-[0_18px_70px_rgba(0,0,0,0.10)]">
+                  <div className="max-w-[260px] sm:max-w-md rounded-[18px] sm:rounded-[26px] border border-black/10 bg-white/40 p-3 sm:p-5 backdrop-blur-md shadow-[0_18px_70px_rgba(0,0,0,0.10)]">
                     
-
-                    <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+                    <h4 className="mt-2 sm:mt-4 text-2xl sm:text-5xl font-semibold tracking-tight">
                       Miraya
-                    </h1>
+                    </h4>
 
-                    <p className="mt-2 text-base sm:text-lg font-semibold text-black/80">
+                    <p className="mt-1 sm:mt-2 text-xs sm:text-lg font-semibold text-black/80">
                       The bag they’ll ask about before they say hello.
                     </p>
                   </div>
@@ -216,9 +215,7 @@ export default function Home() {
                     COLLECTION
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold">Shop products</h2>
-                  <p className="mt-1 text-sm text-black/60">
-                    Open any product to see 5 images + variants.
-                  </p>
+                  
                 </div>
 
                 <div className="mt-4 flex gap-2 sm:mt-0">
