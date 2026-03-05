@@ -344,7 +344,7 @@ export default function Home() {
                       href="mailto:airbnb.yash@gmail.com"
                       className="mt-1 block text-[15px] font-medium text-black/80 hover:text-black"
                     >
-                      airbnb.yash@gmail.com
+                      mirayabags.help@gmail.com
                     </a>
                   </div>
 
@@ -358,7 +358,7 @@ export default function Home() {
                       rel="noreferrer"
                       className="mt-1 block text-[15px] font-medium text-black/80 hover:text-black"
                     >
-                      @mirayaabags
+                      @miyara.bags
                     </a>
                   </div>
                 </div>

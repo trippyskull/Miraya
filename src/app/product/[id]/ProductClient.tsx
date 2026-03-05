@@ -95,9 +95,28 @@ export default function ProductClient({ product }: { product: Product }) {
           </h1>
           <p className="mt-2 text-black/60">{product.subtitle}</p>
 
-          <p className="mt-6 text-black/70 leading-relaxed">
-            {product.description}
-          </p>
+          {/* Description */}
+<p className="mt-5 text-[15px] leading-relaxed text-black/75 whitespace-pre-line">
+  {product.description}
+</p>
+
+{/* Material */}
+<div className="mt-6">
+  <div className="text-sm font-semibold text-black/80">Material</div>
+  <div className="mt-2 rounded-2xl border border-black/10 bg-white/60 px-4 py-3 text-sm text-black/70">
+    {product.material}
+  </div>
+</div>
+
+{/* Dimensions */}
+<div className="mt-6">
+  <div className="text-sm font-semibold text-black/80">Dimensions</div>
+  <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-black/70">
+    {product.dimensions.map((d) => (
+      <li key={d}>{d}</li>
+    ))}
+  </ul>
+</div>
 
           {/* Variants */}
           <div className="mt-8">

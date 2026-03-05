@@ -10,7 +10,9 @@ export type Product = {
   title: string;
   subtitle: string;
   description: string;
-  images: string[]; // paths in /public
+  material: string;          // ✅ NEW
+  dimensions: string[];      // ✅ NEW (bullet points)
+  images: string[];          // paths in /public
   variants: Variant[];
   tags: string[];
 };
@@ -21,15 +23,14 @@ export const PRODUCTS: Product[] = [
     title: "Corset Bag",
     subtitle: "She’s laced. She’s bold. She’s the moment.",
     description:
-      `She’s laced. She’s bold. She’s the moment.
-Crafted in premium leather with delicate lace trim and bow lace-up detailing, this structured corset silhouette is pure statement energy. Feminine, fierce, and impossible to ignore. Spacious on the inside with a soft blush lining and secure zip pocket — because style should never compromise practicality.
-Lace it tight. Rule the night / Main Character? Obviously.
-
-Dimensions:
-• Height: 6.5 inches
-• Width: 8.5 inches
-• Depth: 3.5 inches
-• Handle Drop: 4.5 inches`,
+      "Crafted in premium leather with delicate lace trim and bow lace-up detailing, this structured corset silhouette is pure statement energy. Feminine, fierce, and impossible to ignore. Spacious on the inside with a soft blush lining and secure zip pocket — because style should never compromise practicality. Lace it tight. Rule the night. Main Character? Obviously.",
+    material: "Leather + fabric",
+    dimensions: [
+      "Height: 6.5 inches",
+      "Width: 8.5 inches",
+      "Depth: 3.5 inches",
+      "Handle Drop: 4.5 inches",
+    ],
     images: [
       "/products/Corset Bag (front).png",
       "/products/Corset Bag (side).png",
@@ -44,16 +45,13 @@ Dimensions:
     title: "Croissant Bag",
     subtitle: "Soft, warm, fresh-out-the-oven energy.",
     description:
-      `The Miraya Croissant Bag is crafted from luxuriously smooth genuine leather that feels as soft as the first warm bite of a fresh croissant. The sculpted panels curve like delicate pastry layers — plush, rounded, and perfectly folded into a silhouette that looks almost too good to be real.
-
-This isn’t just a bag.
-It’s that soft, warm, fresh-out-the-oven energy.
-The kind that makes heads turn — and suddenly crave a croissant.
-
-Dimensions:
-• Length: 10 inches
-• Height: 5 inches
-• Width (Base Depth): 3 inches`,
+      "The Miraya Croissant Bag is crafted from luxuriously smooth genuine leather that feels as soft as the first warm bite of a fresh croissant. The sculpted panels curve like delicate pastry layers — plush, rounded, and perfectly folded into a silhouette that looks almost too good to be real. This isn’t just a bag. It’s that soft, warm, fresh-out-the-oven energy — the kind that makes heads turn and suddenly crave a croissant.",
+    material: "Leather + fabric",
+    dimensions: [
+      "Length: 10 inches",
+      "Height: 5 inches",
+      "Width (Base Depth): 3 inches",
+    ],
     images: [
       "/products/Croissant Bag (front).png",
       "/products/Croissant Bag (side).png",
@@ -68,13 +66,13 @@ Dimensions:
     title: "Peony Bloom bag",
     subtitle: "Carry art. Not flowers.",
     description:
-      `Designed to resemble a delicate bouquet of peonies, this statement piece blends playful charm with refined craftsmanship. The structured cone silhouette, polka-dot detailing, and soft satin bow create a dreamy aesthetic — while the secure top zip closure and spacious interior make it beautifully functional.
-Because why carry flowers, when you can carry art?
-
-Dimensions:
-• Height: 12–13 inches
-• Top Diameter: 9–10 inches
-• Base Width: 4–5 inches`,
+      "Designed to resemble a delicate bouquet of peonies, this statement piece blends playful charm with refined craftsmanship. The structured cone silhouette, polka-dot detailing, and soft satin bow create a dreamy aesthetic — while the secure top zip closure and spacious interior make it beautifully functional. Because why carry flowers, when you can carry art?",
+    material: "Leather + fabric",
+    dimensions: [
+      "Height: 12–13 inches",
+      "Top Diameter: 9–10 inches",
+      "Base Width: 4–5 inches",
+    ],
     images: [
       "/products/Peony bloom bag (front).png",
       "/products/Peony Bloom bag (side).png",
@@ -89,12 +87,12 @@ Dimensions:
     title: "Pyramid Bag",
     subtitle: "Doesn’t follow trends. Creates them.",
     description:
-      `Inspired by architectural monuments and ancient pyramids, this structured black statement bag is crafted in rich textured vegan leather with gold-plated trims defining its geometric edges. The magnetic top closure ensures effortless access, while the thoughtfully designed interior offers ample space.
-A piece that doesn’t follow trends — it creates them.
-
-Dimensions:
-• Height: 7–8 inches
-• Base Width: 4–5 inches`,
+      "Inspired by architectural monuments and ancient pyramids, this structured black statement bag is crafted in rich textured vegan leather with gold-plated trims defining its geometric edges. The magnetic top closure ensures effortless access, while the thoughtfully designed interior offers ample space. A piece that doesn’t follow trends — it creates them.",
+    material: "Leather + fabric",
+    dimensions: [
+      "Height: 7–8 inches",
+      "Base Width: 4–5 inches",
+    ],
     images: [
       "/products/Pyramid bag (front).png",
       "/products/Pyramid Bag (side).png",
@@ -109,14 +107,14 @@ Dimensions:
     title: "Seashell clutch",
     subtitle: "Coastal charm. Timeless elegance.",
     description:
-      `Inspired by the gentle curves of a seashell, the Miraya Seashell Clutch is where coastal charm meets timeless elegance. Crafted in premium leather with a sculpted spiral design and a pearl-kiss clasp, it’s your perfect companion for beach soirées, sundowners, and destination weddings.
-Wear it as a sling with the gold chain strap or carry it as a statement clutch — either way, it whispers luxury.
-
-Dimensions:
-• Width: 7.5 inches
-• Height: 6.7 inches
-• Depth: 2.4 inches
-• Chain drop: 21.7 inches`,
+      "Inspired by the gentle curves of a seashell, the Miraya Seashell Clutch is where coastal charm meets timeless elegance. Crafted in premium leather with a sculpted spiral design and a pearl-kiss clasp, it’s your perfect companion for beach soirées, sundowners, and destination weddings. Wear it as a sling with the gold chain strap or carry it as a statement clutch — either way, it whispers luxury.",
+    material: "Leather + fabric",
+    dimensions: [
+      "Width: 7.5 inches",
+      "Height: 6.7 inches",
+      "Depth: 2.4 inches",
+      "Chain drop: 21.7 inches",
+    ],
     images: [
       "/products/seashell Clutch (Front).png",
       "/products/seashell Clutch (side).png",
@@ -131,14 +129,13 @@ Dimensions:
     title: "Teapot Bag",
     subtitle: "This won’t make tea for you — but you’ll be the tea of the party.",
     description:
-      `This will not make tea for you but you will be the tea of the party.
-
-Inspired by India’s timeless love for chai, crafted in structured premium vegan leather with refined embroidery and gold-tone hardware. The circular zip-around closure opens smoothly to reveal a spacious interior — and a circular mirror attached to the inside of the lid (because quick touch-ups between compliments are essential).
-
-Dimensions:
-• Height: 7 inches
-• Width (including spout): 10 inches
-• Depth: 5 inches`,
+      "Inspired by India’s timeless love for chai, crafted in structured premium vegan leather with refined embroidery and gold-tone hardware. The circular zip-around closure opens smoothly to reveal a spacious interior — and a circular mirror attached to the inside of the lid (because quick touch-ups between compliments are essential).",
+    material: "Leather + fabric",
+    dimensions: [
+      "Height: 7 inches",
+      "Width (including spout): 10 inches",
+      "Depth: 5 inches",
+    ],
     images: [
       "/products/Teapot Bag (front).png",
       "/products/Teapot bag (side).png",
